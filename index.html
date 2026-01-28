@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Landing page moderna e responsiva com design limpo e profissional.">
+    <meta name="keywords" content="landing page, web design, responsivo">
+    <meta name="author" content="ABC">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Landing Page - ABC">
+    <meta property="og:description" content="Landing page moderna e responsiva com design limpo e profissional.">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="Landing Page - ABC">
+    <meta property="twitter:description" content="Landing page moderna e responsiva com design limpo e profissional.">
+
+    <title>Landing Page - ABC</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" role="banner">
+        <nav class="nav container" role="navigation" aria-label="Navegação principal">
+            <div class="nav__logo">
+                <a href="#home" aria-label="Ir para a página inicial">ABC</a>
+            </div>
+            <ul class="nav__menu">
+                <li class="nav__item"><a href="#home" class="nav__link">Home</a></li>
+                <li class="nav__item"><a href="#sobre" class="nav__link">Sobre</a></li>
+                <li class="nav__item"><a href="#servicos" class="nav__link">Serviços</a></li>
+                <li class="nav__item"><a href="#contato" class="nav__link">Contato</a></li>
+            </ul>
+            <button class="nav__toggle" aria-label="Alternar menu" aria-expanded="false">
+                <span class="nav__toggle-icon"></span>
+            </button>
+        </nav>
+    </header>
+
+    <main role="main">
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="hero__content container">
+                <h1 class="hero__title">Bem-vindo à Nossa Landing Page</h1>
+                <p class="hero__subtitle">Uma solução moderna e eficiente para o seu negócio</p>
+                <a href="#contato" class="btn btn--primary btn--large">Comece Agora</a>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section id="servicos" class="features">
+            <div class="container">
+                <h2 class="section__title">Nossos Serviços</h2>
+                <p class="section__subtitle">Soluções completas para impulsionar seu sucesso</p>
+
+                <div class="features__grid">
+                    <article class="feature__card">
+                        <div class="feature__icon" aria-hidden="true">🚀</div>
+                        <h3 class="feature__title">Alta Performance</h3>
+                        <p class="feature__description">Soluções otimizadas para garantir máxima velocidade e eficiência em todas as operações.</p>
+                    </article>
+
+                    <article class="feature__card">
+                        <div class="feature__icon" aria-hidden="true">💡</div>
+                        <h3 class="feature__title">Inovação Constante</h3>
+                        <p class="feature__description">Tecnologia de ponta e metodologias modernas para manter você sempre à frente.</p>
+                    </article>
+
+                    <article class="feature__card">
+                        <div class="feature__icon" aria-hidden="true">🛡️</div>
+                        <h3 class="feature__title">Segurança Total</h3>
+                        <p class="feature__description">Proteção avançada dos seus dados com as melhores práticas de segurança.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="sobre" class="about">
+            <div class="container">
+                <div class="about__content">
+                    <div class="about__text">
+                        <h2 class="section__title">Sobre Nós</h2>
+                        <p class="about__paragraph">
+                            Somos uma equipe dedicada a oferecer as melhores soluções para o seu negócio.
+                            Com anos de experiência no mercado, combinamos expertise técnica com
+                            visão estratégica para entregar resultados excepcionais.
+                        </p>
+                        <p class="about__paragraph">
+                            Nossa abordagem focada no cliente nos permite entender suas necessidades
+                            únicas e desenvolver soluções personalizadas que geram valor real.
+                        </p>
+                        <a href="#contato" class="btn btn--secondary">Saiba Mais</a>
+                    </div>
+                    <div class="about__image">
+                        <div class="about__placeholder" aria-label="Ilustração representando a equipe">
+                            <span class="about__icon" aria-hidden="true">👥</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section id="contato" class="cta">
+            <div class="container">
+                <div class="cta__content">
+                    <h2 class="cta__title">Pronto para Começar?</h2>
+                    <p class="cta__text">Entre em contato conosco e descubra como podemos ajudar a transformar seu negócio.</p>
+                    <div class="cta__actions">
+                        <a href="mailto:contato@abc.com" class="btn btn--primary btn--large">Entre em Contato</a>
+                        <div class="cta__social">
+                            <a href="#" class="cta__social-link" aria-label="Facebook">
+                                <span aria-hidden="true">📘</span>
+                            </a>
+                            <a href="#" class="cta__social-link" aria-label="Twitter">
+                                <span aria-hidden="true">🐦</span>
+                            </a>
+                            <a href="#" class="cta__social-link" aria-label="LinkedIn">
+                                <span aria-hidden="true">💼</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer__content">
+                <p class="footer__copyright">&copy; 2026 ABC. Todos os direitos reservados.</p>
+                <nav class="footer__nav" aria-label="Navegação do rodapé">
+                    <a href="#" class="footer__link">Termos de Uso</a>
+                    <a href="#" class="footer__link">Política de Privacidade</a>
+                    <a href="#" class="footer__link">Contato</a>
+                </nav>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
