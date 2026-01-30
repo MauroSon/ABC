@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador Simples</title>
+    <style>
+        /* CSS Reset e estilos base */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+
+        /* Container do contador */
+        .counter-container {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            text-align: center;
+            min-width: 300px;
+        }
+
+        /* Título */
+        h1 {
+            color: #333;
+            margin-bottom: 1.5rem;
+            font-size: 1.8rem;
+        }
+
+        /* Label do contador */
+        .counter-label {
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 1rem;
+        }
+
+        /* Valor do contador */
+        .counter-value {
+            display: block;
+            font-size: 4rem;
+            font-weight: bold;
+            color: #667eea;
+            margin-bottom: 2rem;
+        }
+
+        /* Botão de incrementar */
+        .btn-increment {
+            padding: 1rem 2rem;
+            font-size: 1.2rem;
+            background: #667eea;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn-increment:hover {
+            background: #5568d3;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        .btn-increment:active {
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <div class="counter-container">
+        <h1>Contador Simples</h1>
+        <p class="counter-label">Valor do contador: <span id="counter-value" class="counter-value">0</span></p>
+        <button id="increment-btn" type="button" class="btn-increment">Somar 1</button>
+    </div>
+
+    <script>
+        'use strict';
+
+        // Aguarda o DOM estar completamente carregado
+        document.addEventListener('DOMContentLoaded', function() {
+            // Estado do contador
+            let contador = 0;
+
+            // Seleção de elementos do DOM
+            const counterValue = document.getElementById('counter-value');
+            const incrementBtn = document.getElementById('increment-btn');
+
+            // Verificação de null para evitar erros
+            if (!counterValue || !incrementBtn) {
+                console.error('Elementos do DOM não encontrados');
+                return;
+            }
+
+            // Função para atualizar o display do contador
+            function atualizarDisplay() {
+                counterValue.textContent = contador;
+            }
+
+            // Função para incrementar o contador
+            function incrementarContador() {
+                contador += 1;
+                atualizarDisplay();
+            }
+
+            // Adiciona event listener ao botão
+            incrementBtn.addEventListener('click', incrementarContador);
+
+            // Inicializa o display
+            atualizarDisplay();
+        });
+    </script>
+</body>
+</html>
