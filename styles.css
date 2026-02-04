@@ -11,7 +11,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #9333ea 0%, #6b21a8 100%);
     padding: 20px;
 }
 
@@ -37,7 +37,7 @@ header h1 {
 .counter-value {
     font-size: 72px;
     font-weight: bold;
-    color: #667eea;
+    color: #9333ea;
     margin: 20px 0;
     transition: transform 0.2s ease;
 }
@@ -52,7 +52,7 @@ header h1 {
     }
     50% {
         transform: scale(1.1);
-        color: #764ba2;
+        color: #7c3aed;
     }
 }
 
@@ -89,21 +89,21 @@ header h1 {
 }
 
 .btn:focus-visible {
-    outline: 3px solid #667eea;
+    outline: 3px solid #9333ea;
     outline-offset: 2px;
 }
 
 /* Cores específicas dos botões */
 .btn-increment {
-    background-color: #10b981;
+    background-color: #a855f7;
 }
 
 .btn-decrement {
-    background-color: #f59e0b;
+    background-color: #c084fc;
 }
 
 .btn-reset {
-    background-color: #ef4444;
+    background-color: #7c3aed;
 }
 
 /* Footer */
