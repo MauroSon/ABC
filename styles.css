@@ -1,10 +1,35 @@
-/* Reset e base */
+/**
+ * Contador Interativo - Estilos CSS
+ *
+ * Este arquivo define todos os estilos visuais do contador interativo,
+ * incluindo layout, cores, animações e responsividade.
+ *
+ * Tema: Roxo (#9333ea, #7c3aed, #a855f7, #c084fc, #6b21a8)
+ * @author MauroSon
+ * @version 1.0.0
+ * @license MIT
+ */
+
+/* ============================================================================
+   RESET E BASE
+   ============================================================================ */
+
+/**
+ * Reset CSS para garantir consistência cross-browser
+ * Remove margens e paddings padrão e define box-sizing
+ */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/**
+ * Estilos do corpo da página
+ * - Usa fontes do sistema para melhor performance
+ * - Centraliza o container com Flexbox
+ * - Aplica gradiente roxo como fundo
+ */
 body {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
     min-height: 100vh;
@@ -15,7 +40,16 @@ body {
     padding: 20px;
 }
 
-/* Container principal */
+/* ============================================================================
+   CONTAINER PRINCIPAL
+   ============================================================================ */
+
+/**
+ * Container principal do contador
+ * - Fundo branco com bordas arredondadas
+ * - Sombra suave para profundidade
+ * - Largura máxima para telas grandes
+ */
 .counter-container {
     background: white;
     border-radius: 16px;
@@ -26,6 +60,9 @@ body {
     text-align: center;
 }
 
+/**
+ * Título principal do contador
+ */
 header h1 {
     color: #333;
     font-size: 28px;
@@ -33,7 +70,16 @@ header h1 {
     font-weight: 700;
 }
 
-/* Display do valor */
+/* ============================================================================
+   DISPLAY DO VALOR
+   ============================================================================ */
+
+/**
+ * Display que mostra o valor atual do contador
+ * - Fonte grande para legibilidade
+ * - Cor roxa para consistência com o tema
+ * - Transição suave para transformações
+ */
 .counter-value {
     font-size: 72px;
     font-weight: bold;
@@ -42,10 +88,19 @@ header h1 {
     transition: transform 0.2s ease;
 }
 
+/**
+ * Classe ativada quando o valor muda
+ * Adiciona animação de highlight para feedback visual
+ */
 .counter-value.value-changed {
     animation: highlight 0.3s ease;
 }
 
+/**
+ * Animação de highlight
+ * - Escala o valor para 1.1x no meio da animação
+ * - Muda a cor para roxo vibrante temporariamente
+ */
 @keyframes highlight {
     0%, 100% {
         transform: scale(1);
@@ -56,7 +111,16 @@ header h1 {
     }
 }
 
-/* Container dos botões */
+/* ============================================================================
+   BOTÕES
+   ============================================================================ */
+
+/**
+ * Container dos botões
+ * - Layout Flexbox para alinhamento
+ * - Gap de 12px entre botões
+ * - Permite quebra de linha em telas pequenas
+ */
 .buttons-container {
     display: flex;
     gap: 12px;
@@ -65,7 +129,12 @@ header h1 {
     flex-wrap: wrap;
 }
 
-/* Estilo base dos botões */
+/**
+ * Estilo base para todos os botões
+ * - Sem borda, cantos arredondados
+ * - Cursor pointer para indicar interatividade
+ * - Transições suaves para hover/active
+ */
 .btn {
     padding: 12px 24px;
     border: none;
@@ -79,41 +148,83 @@ header h1 {
     outline: none;
 }
 
+/**
+ * Estado hover dos botões
+ * - Aumenta ligeiramente o tamanho (scale)
+ * - Aumenta o brilho para feedback visual
+ */
 .btn:hover {
     transform: scale(1.05);
     filter: brightness(1.1);
 }
 
+/**
+ * Estado active dos botões (quando pressionado)
+ * - Diminui ligeiramente o tamanho para sensação de pressionar
+ */
 .btn:active {
     transform: scale(0.95);
 }
 
+/**
+ * Estado de foco dos botões (navegação por teclado)
+ * - Contorno roxo visível para acessibilidade
+ * - Offset para não sobrepor o botão
+ */
 .btn:focus-visible {
     outline: 3px solid #9333ea;
     outline-offset: 2px;
 }
 
-/* Cores específicas dos botões */
+/* ============================================================================
+   CORES ESPECÍFICAS DOS BOTÕES
+   ============================================================================ */
+
+/**
+ * Botão de incremento (+1)
+ * Cor: Roxo claro para ação positiva
+ */
 .btn-increment {
     background-color: #a855f7;
 }
 
+/**
+ * Botão de decremento (-1)
+ * Cor: Roxo médio para ação secundária
+ */
 .btn-decrement {
     background-color: #c084fc;
 }
 
+/**
+ * Botão de reset (zerar)
+ * Cor: Roxo escuro para ação destrutiva
+ */
 .btn-reset {
     background-color: #7c3aed;
 }
 
-/* Footer */
+/* ============================================================================
+   FOOTER
+   ============================================================================ */
+
+/**
+ * Rodapé com texto de instrução
+ */
 footer {
     margin-top: 32px;
     color: #666;
     font-size: 14px;
 }
 
-/* Responsividade para telas pequenas */
+/* ============================================================================
+   RESPONSIVIDADE
+   ============================================================================ */
+
+/**
+ * Ajustes para telas pequenas (mobile)
+ * Reduz tamanhos de fonte, padding e gaps
+ */
 @media (max-width: 480px) {
     .counter-container {
         padding: 24px;

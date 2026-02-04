@@ -1,21 +1,47 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+<!--
+    Contador Interativo - Estrutura HTML
+
+    Este arquivo define a estrutura semântica do contador interativo.
+    Segue as melhores práticas de HTML5 e acessibilidade.
+
+    @author MauroSon
+    @version 1.0.0
+    @license MIT
+-->
 <head>
+    <!-- Meta tags essenciais -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Contador interativo com botões para incrementar, decrementar e zerar">
+
+    <!-- Título da página -->
     <title>Contador Interativo</title>
+
+    <!-- Link para stylesheet externo -->
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Container principal com classe para estilização -->
     <main class="counter-container">
+        <!-- Cabeçalho com título -->
         <header>
             <h1>Contador Interativo</h1>
         </header>
 
+        <!-- Display do valor do contador
+             - aria-live="polite": Notifica leitores de tela quando o valor muda
+             - ID usado pelo JavaScript para atualizar o valor
+        -->
         <div id="counterValue" class="counter-value" aria-live="polite">0</div>
 
+        <!-- Container dos botões de controle -->
         <div class="buttons-container">
+            <!-- Botão de decrementar (-1)
+                 - aria-label: Descrição para leitores de tela
+                 - type="button": Previne submit de formulário
+            -->
             <button
                 id="btnDecrement"
                 class="btn btn-decrement"
@@ -23,6 +49,8 @@
                 type="button">
                 ➖ -1
             </button>
+
+            <!-- Botão de zerar (reset) -->
             <button
                 id="btnReset"
                 class="btn btn-reset"
@@ -30,6 +58,8 @@
                 type="button">
                 🔄 Zerar
             </button>
+
+            <!-- Botão de incrementar (+1) -->
             <button
                 id="btnIncrement"
                 class="btn btn-increment"
@@ -39,11 +69,13 @@
             </button>
         </div>
 
+        <!-- Rodapé com instruções de uso -->
         <footer>
             <p>Use os botões para controlar o contador</p>
         </footer>
     </main>
 
+    <!-- Script JavaScript externo -->
     <script src="script.js"></script>
 </body>
 </html>
