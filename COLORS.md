@@ -4,17 +4,17 @@ Este documento define a paleta de cores oficial do projeto Synkrony ABC, associa
 
 ## Paleta de Cores
 
-| Letra | HEX     | Nome         | Visualizacao |
-|-------|---------|--------------|--------------|
-| A     | #FF6B6B | Coral Red    | ![A](https://via.placeholder.com/15/FF6B6B/000000?text=+) |
-| B     | #4ECDC4 | Turquoise    | ![B](https://via.placeholder.com/15/4ECDC4/000000?text=+) |
-| C     | #45B7D1 | Sky Blue     | ![C](https://via.placeholder.com/15/45B7D1/000000?text=+) |
-| D     | #96CEB4 | Sage Green   | ![D](https://via.placeholder.com/15/96CEB4/000000?text=+) |
-| E     | #FFEAA7 | Warm Yellow  | ![E](https://via.placeholder.com/15/FFEAA7/000000?text=+) |
-| F     | #DDA0DD | Plum         | ![F](https://via.placeholder.com/15/DDA0DD/000000?text=+) |
-| J     | #98D8C8 | Mint         | ![J](https://via.placeholder.com/15/98D8C8/000000?text=+) |
-| K     | #F7DC6F | Golden       | ![K](https://via.placeholder.com/15/F7DC6F/000000?text=+) |
-| Y     | #BB8FCE | Lavender     | ![Y](https://via.placeholder.com/15/BB8FCE/000000?text=+) |
+| Letra | HEX     | Nome               | Visualizacao |
+|-------|---------|--------------------|--------------|
+| A     | #FFB3B3 | Light Coral        | ![A](https://via.placeholder.com/15/FFB3B3/000000?text=+) |
+| B     | #B3E8E3 | Light Turquoise    | ![B](https://via.placeholder.com/15/B3E8E3/000000?text=+) |
+| C     | #B3D9EA | Light Sky Blue     | ![C](https://via.placeholder.com/15/B3D9EA/000000?text=+) |
+| D     | #C9E6D9 | Light Sage         | ![D](https://via.placeholder.com/15/C9E6D9/000000?text=+) |
+| E     | #FFF3CC | Light Cream        | ![E](https://via.placeholder.com/15/FFF3CC/000000?text=+) |
+| F     | #EBD3EB | Light Plum         | ![F](https://via.placeholder.com/15/EBD3EB/000000?text=+) |
+| J     | #C9ECE3 | Light Mint         | ![J](https://via.placeholder.com/15/C9ECE3/000000?text=+) |
+| K     | #FAEBAA | Light Golden       | ![K](https://via.placeholder.com/15/FAEBAA/000000?text=+) |
+| Y     | #DDC5E8 | Light Lavender     | ![Y](https://via.placeholder.com/15/DDC5E8/000000?text=+) |
 
 ## Estrutura do Arquivo colors.json
 
@@ -28,8 +28,8 @@ O arquivo `colors.json` contem a definicao completa do sistema de cores:
     "lastUpdated": "2026-03-18"
   },
   "palette": {
-    "A": { "hex": "#FF6B6B", "name": "Coral Red" },
-    "B": { "hex": "#4ECDC4", "name": "Turquoise" },
+    "A": { "hex": "#FFB3B3", "name": "Light Coral" },
+    "B": { "hex": "#B3E8E3", "name": "Light Turquoise" },
     ...
   },
   "themes": {
@@ -59,8 +59,8 @@ Para usar as cores no seu codigo:
 const colors = require('./colors.json');
 
 // Acessar a cor de uma letra
-const corA = colors.palette.A.hex;        // "#FF6B6B"
-const nomeA = colors.palette.A.name;      // "Coral Red"
+const corA = colors.palette.A.hex;        // "#FFB3B3"
+const nomeA = colors.palette.A.name;      // "Light Coral"
 
 // Usar em aplicacao
 console.log(`A letra A tem a cor ${corA} (${nomeA})`);
@@ -74,8 +74,8 @@ with open('colors.json', 'r') as f:
     colors = json.load(f)
 
 # Acessar a cor de uma letra
-cor_a = colors['palette']['A']['hex']      # "#FF6B6B"
-nome_a = colors['palette']['A']['name']    # "Coral Red"
+cor_a = colors['palette']['A']['hex']      # "#FFB3B3"
+nome_a = colors['palette']['A']['name']    # "Light Coral"
 ```
 
 ## Temas Disponiveis
@@ -121,4 +121,5 @@ cat colors.json | python -m json.tool
 
 ## Historico
 
+- **v1.1.0** (2026-03-18): Atualizacao para paleta de cores claras (variantes suaves)
 - **v1.0.0** (2026-03-18): Implementacao inicial do sistema de cores Synkrony ABC
