@@ -22,9 +22,14 @@
             text-align: center;
         }
         .contador {
-            font-size: 72px;
-            margin: 20px 0;
-            font-weight: bold;
+            font-size: 96px;
+            margin: 30px 0;
+            font-weight: 800;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
         }
         .botoes {
             display: flex;
