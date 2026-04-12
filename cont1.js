@@ -11,6 +11,5 @@ function subtrair() {
 }
 
 function atualizarTela() {
-    // ERRO CRÍTICO: elemento não existe (vai quebrar o script)
-    document.getElementById("valor-inexistente").innerText = contador;
+    document.getElementById("valor").innerText = contador;
 }
