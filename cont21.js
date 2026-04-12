@@ -12,6 +12,5 @@ function subtrair2() {
 }
 
 function atualizarTela2() {
-    // ERRO MÉDIO: usa innerHTML desnecessariamente (pode causar problemas de segurança)
-    document.getElementById("valor").innerHTML = contador2;
+    document.getElementById("valor").textContent = contador2;
 }
