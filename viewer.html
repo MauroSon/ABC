@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Synkrony ABC - Visualizador de Paleta</title>
+  <link rel="stylesheet" href="colors.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      min-height: 100vh;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .subtitle {
+      opacity: 0.8;
+      font-size: 1.1rem;
+    }
+
+    .theme-toggle {
+      position: fixed;
+      top: 1rem;
+      right: 1rem;
+      padding: 0.75rem 1.5rem;
+      background: var(--color-a);
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+      font-size: 1rem;
+      font-weight: 600;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .theme-toggle:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .palette-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.5rem;
+      margin-bottom: 3rem;
+    }
+
+    .color-card {
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+    }
+
+    .color-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+    }
+
+    .color-display {
+      height: 120px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 3rem;
+      font-weight: bold;
+    }
+
+    .color-info {
+      padding: 1rem;
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    .color-name {
+      font-weight: 600;
+      font-size: 1.1rem;
+      margin-bottom: 0.25rem;
+    }
+
+    .color-hex {
+      font-family: 'Courier New', monospace;
+      opacity: 0.8;
+      font-size: 0.9rem;
+    }
+
+    /* Cores específicas para cada letra */
+    .card-a .color-display { background: var(--color-a); }
+    .card-b .color-display { background: var(--color-b); }
+    .card-c .color-display { background: var(--color-c); }
+    .card-d .color-display { background: var(--color-d); }
+    .card-e .color-display { background: var(--color-e); }
+    .card-f .color-display { background: var(--color-f); }
+    .card-g .color-display { background: var(--color-g); }
+    .card-h .color-display { background: var(--color-h); }
+    .card-i .color-display { background: var(--color-i); }
+    .card-j .color-display { background: var(--color-j); }
+    .card-cedilla .color-display { background: var(--color-cedilla); }
+
+    /* Tema Light */
+    body.light-theme {
+      background-color: var(--theme-bg-light);
+      color: var(--theme-text-light);
+    }
+
+    body.light-theme .color-info {
+      background: #f8f9fa;
+    }
+
+    /* Demo Section */
+    .demo-section {
+      margin-top: 3rem;
+      padding: 2rem;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 12px;
+    }
+
+    .demo-section h2 {
+      margin-bottom: 1.5rem;
+    }
+
+    .demo-colors {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .demo-swatch {
+      padding: 0.75rem 1.5rem;
+      border-radius: 8px;
+      font-weight: 600;
+      transition: transform 0.2s ease;
+    }
+
+    .demo-swatch:hover {
+      transform: scale(1.1);
+    }
+
+    @media (max-width: 768px) {
+      .palette-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 1rem;
+      }
+
+      h1 {
+        font-size: 1.8rem;
+      }
+
+      .theme-toggle {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <button class="theme-toggle" id="themeToggle">🌙 Tema Dark</button>
+
+  <div class="container">
+    <header>
+      <h1>🎨 Synkrony ABC</h1>
+      <p class="subtitle">Paleta de Cores Expandida (A-J + ç)</p>
+    </header>
+
+    <div class="palette-grid">
+      <div class="color-card card-a">
+        <div class="color-display">A</div>
+        <div class="color-info">
+          <div class="color-name">Light Coral</div>
+          <div class="color-hex">#FFB3B3</div>
+        </div>
+      </div>
+
+      <div class="color-card card-b">
+        <div class="color-display">B</div>
+        <div class="color-info">
+          <div class="color-name">Light Turquoise</div>
+          <div class="color-hex">#B3E8E3</div>
+        </div>
+      </div>
+
+      <div class="color-card card-c">
+        <div class="color-display">C</div>
+        <div class="color-info">
+          <div class="color-name">Light Sky Blue</div>
+          <div class="color-hex">#B3D9EA</div>
+        </div>
+      </div>
+
+      <div class="color-card card-d">
+        <div class="color-display">D</div>
+        <div class="color-info">
+          <div class="color-name">Light Sage</div>
+          <div class="color-hex">#C9E6D9</div>
+        </div>
+      </div>
+
+      <div class="color-card card-e">
+        <div class="color-display">E</div>
+        <div class="color-info">
+          <div class="color-name">Light Cream</div>
+          <div class="color-hex">#FFF3CC</div>
+        </div>
+      </div>
+
+      <div class="color-card card-f">
+        <div class="color-display">F</div>
+        <div class="color-info">
+          <div class="color-name">Light Plum</div>
+          <div class="color-hex">#EBD3EB</div>
+        </div>
+      </div>
+
+      <div class="color-card card-g">
+        <div class="color-display">G</div>
+        <div class="color-info">
+          <div class="color-name">Light Peach</div>
+          <div class="color-hex">#FFE6CC</div>
+        </div>
+      </div>
+
+      <div class="color-card card-h">
+        <div class="color-display">H</div>
+        <div class="color-info">
+          <div class="color-name">Light Azure</div>
+          <div class="color-hex">#E6F3FF</div>
+        </div>
+      </div>
+
+      <div class="color-card card-i">
+        <div class="color-display">I</div>
+        <div class="color-info">
+          <div class="color-name">Light Periwinkle</div>
+          <div class="color-hex">#F0E6FF</div>
+        </div>
+      </div>
+
+      <div class="color-card card-j">
+        <div class="color-display">J</div>
+        <div class="color-info">
+          <div class="color-name">Light Mint</div>
+          <div class="color-hex">#C9ECE3</div>
+        </div>
+      </div>
+
+      <div class="color-card card-cedilla">
+        <div class="color-display">ç</div>
+        <div class="color-info">
+          <div class="color-name">Light Rose</div>
+          <div class="color-hex">#FFE6F0</div>
+        </div>
+      </div>
+    </div>
+
+    <section class="demo-section">
+      <h2>📋 Demonstração de Uso</h2>
+      <div class="demo-colors">
+        <span class="demo-swatch" style="background: var(--color-a);">A</span>
+        <span class="demo-swatch" style="background: var(--color-b);">B</span>
+        <span class="demo-swatch" style="background: var(--color-c);">C</span>
+        <span class="demo-swatch" style="background: var(--color-d);">D</span>
+        <span class="demo-swatch" style="background: var(--color-e);">E</span>
+        <span class="demo-swatch" style="background: var(--color-f);">F</span>
+        <span class="demo-swatch" style="background: var(--color-g);">G</span>
+        <span class="demo-swatch" style="background: var(--color-h);">H</span>
+        <span class="demo-swatch" style="background: var(--color-i);">I</span>
+        <span class="demo-swatch" style="background: var(--color-j);">J</span>
+        <span class="demo-swatch" style="background: var(--color-cedilla);">ç</span>
+      </div>
+    </section>
+  </div>
+
+  <script>
+    const themeToggle = document.getElementById('themeToggle');
+    let isLightTheme = false;
+
+    themeToggle.addEventListener('click', () => {
+      isLightTheme = !isLightTheme;
+      document.body.classList.toggle('light-theme', isLightTheme);
+      themeToggle.textContent = isLightTheme ? '☀️ Tema Light' : '🌙 Tema Dark';
+    });
+
+    // Copiar código hexadecimal ao clicar
+    document.querySelectorAll('.color-card').forEach(card => {
+      card.addEventListener('click', () => {
+        const hex = card.querySelector('.color-hex').textContent;
+        navigator.clipboard.writeText(hex).then(() => {
+          const originalText = card.querySelector('.color-hex').textContent;
+          card.querySelector('.color-hex').textContent = 'Copiado!';
+          setTimeout(() => {
+            card.querySelector('.color-hex').textContent = originalText;
+          }, 1000);
+        });
+      });
+    });
+  </script>
+</body>
+</html>

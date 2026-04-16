@@ -1,0 +1,24 @@
+{
+  "metadata": {
+    "version": "1.0.1",
+    "project": "Synkrony ABC - Paleta Expandida",
+    "lastUpdated": "2026-04-16"
+  },
+  "palette": {
+    "A": { "hex": "#FFB3B3", "name": "Light Coral" },
+    "B": { "hex": "#B3E8E3", "name": "Light Turquoise" },
+    "C": { "hex": "#B3D9EA", "name": "Light Sky Blue" },
+    "D": { "hex": "#C9E6D9", "name": "Light Sage" },
+    "E": { "hex": "#FFF3CC", "name": "Light Cream" },
+    "F": { "hex": "#EBD3EB", "name": "Light Plum" },
+    "G": { "hex": "#FFE6CC", "name": "Light Peach" },
+    "H": { "hex": "#E6F3FF", "name": "Light Azure" },
+    "I": { "hex": "#F0E6FF", "name": "Light Periwinkle" },
+    "J": { "hex": "#C9ECE3", "name": "Light Mint" },
+    "ç": { "hex": "#FFE6F0", "name": "Light Rose" }
+  },
+  "themes": {
+    "default": { "background": "#2C3E50", "text": "#ECF0F1" },
+    "light": { "background": "#FFFFFF", "text": "#2C3E50" }
+  }
+}

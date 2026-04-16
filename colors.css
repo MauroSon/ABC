@@ -1,0 +1,28 @@
+:root {
+  /* Paleta de Cores Synkrony ABC */
+  --color-a: #FFB3B3;    /* Light Coral */
+  --color-b: #B3E8E3;    /* Light Turquoise */
+  --color-c: #B3D9EA;    /* Light Sky Blue */
+  --color-d: #C9E6D9;    /* Light Sage */
+  --color-e: #FFF3CC;    /* Light Cream */
+  --color-f: #EBD3EB;    /* Light Plum */
+  --color-g: #FFE6CC;    /* Light Peach */
+  --color-h: #E6F3FF;    /* Light Azure */
+  --color-i: #F0E6FF;    /* Light Periwinkle */
+  --color-j: #C9ECE3;    /* Light Mint */
+  --color-cedilla: #FFE6F0;  /* Light Rose */
+
+  /* Tema Padrão (Dark) */
+  --theme-bg-default: #2C3E50;
+  --theme-text-default: #ECF0F1;
+
+  /* Tema Light */
+  --theme-bg-light: #FFFFFF;
+  --theme-text-light: #2C3E50;
+}
+
+/* Aplicação do tema padrão */
+body {
+  background-color: var(--theme-bg-default);
+  color: var(--theme-text-default);
+}
