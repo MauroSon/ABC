@@ -1,0 +1,52 @@
+/* Variáveis CSS */
+:root {
+  --cor-primaria: #3498db;
+  --cor-secundaria: #2ecc71;
+  --cor-fundo: #ffffff;
+  --cor-texto: #333333;
+  --espacamento-base: 1rem;
+  --borda-radius: 4px;
+}
+
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: var(--cor-texto);
+  background-color: var(--cor-fundo);
+}
+
+/* Classes utilitárias */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--espacamento-base);
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background-color: var(--cor-primaria);
+  color: white;
+  text-decoration: none;
+  border-radius: var(--borda-radius);
+  border: none;
+  cursor: pointer;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+.card {
+  background: white;
+  border-radius: var(--borda-radius);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  padding: var(--espacamento-base);
+}
