@@ -1,0 +1,88 @@
+================================================================================
+DOCUMENTAÇÃO - SISTEMA DE AVALIAÇÃO DA UNIVERSIDADE DE BRASÍLIA (UnB)
+================================================================================
+
+ARQUIVO ORIGEM: Explicao-IRA-portugus.pdf
+DOCUMENTO: Informação nº 5/2016/INT
+DATA: 18 de julho de 2016
+EMISSOR: Assessoria de Assuntos Internacionais - Universidade de Brasília
+OBJETIVO: Complementação ao Histórico Escolar de Graduação/Pós-Graduação
+
+================================================================================
+1. CONTEXTO DO DOCUMENTO
+================================================================================
+
+A Assessoria de Assuntos Internacionais da Universidade de Brasília declara,
+para os devidos fins e em complementação ao Histórico Escolar de Graduação/
+Pós-Graduação, as informações sobre o sistema de avaliação acadêmica da
+instituição.
+
+
+================================================================================
+2. SISTEMA DE MENÇÕES DA UNB
+================================================================================
+
+A avaliação do desempenho acadêmico é feita através da atribuição de menções,
+conforme estabelecido no Artigo 93 do Regimento Geral da Universidade.
+
+TABELA DE MENÇÕES E EQUIVALÊNCIAS NUMÉRICAS:
+┌──────────┬───────────────────┬────────────────────┐
+│ MENÇÃO   │ ESPECIFICAÇÃO      │ EQUIVALÊNCIA NUMÉRICA │
+├──────────┼───────────────────┼────────────────────┤
+│ SS       │ Superior           │ 9,0 a 10,0          │
+│ MS       │ Médio Superior     │ 7,0 a 8,9           │
+│ MM       │ Médio              │ 5,0 a 6,9           │
+│ MI       │ Médio Inferior     │ 3,0 a 4,9           │
+│ II       │ Inferior           │ 0,1 a 2,9           │
+│ SR       │ Sem Rendimento     │ Acima de 25% de faltas │
+│ CC       │ Crédito Concedido  │ -                   │
+└──────────┴───────────────────┴────────────────────┘
+
+
+================================================================================
+3. POLÍTICA DE CLASSIFICAÇÃO
+================================================================================
+
+A Universidade de Brasília — UNB NÃO utiliza instrumentos de classificação
+que permitam informar:
+- A posição do aluno em relação aos formados de sua turma
+- A posição do aluno em relação aos demais alunos da UNB
+
+Portanto, não há sistema de ranking oficial na instituição.
+
+
+================================================================================
+4. CÓDIGOS ADICIONAIS NO HISTÓRICO ESCOLAR
+================================================================================
+
+Além das menções, podem constar no Histórico Escolar os seguintes códigos:
+
+CÓDIGO - ESPECIFICAÇÃO
+─────────────────────────────────────────────────────────────
+DP     - Dispensado
+TR     - Trancamento Parcial de Matrícula de Concessão Automática
+
+
+================================================================================
+5. CONCEITOS IMPORTANTES
+================================================================================
+
+IRA (Índice de Rendimento Acadêmico):
+- O documento refere-se à explicação do cálculo de IRA
+- Menções são convertidas para valores numéricos para cálculo do IRA
+- SR (Sem Rendimento) é atribuído quando o aluno tem mais de 25% de faltas
+- CC (Crédito Concedido) indica aproveitamento de estudos
+
+
+================================================================================
+6. REFERÊNCIAS
+================================================================================
+
+- Regimento Geral da Universidade de Brasília (Artigo 93)
+- Assessoria de Assuntos Internacionais (INT)
+- Informação nº 5/2016/INT
+
+
+================================================================================
+FIM DO DOCUMENTO
+================================================================================
