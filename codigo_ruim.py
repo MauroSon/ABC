@@ -10,7 +10,8 @@ def processar_dados(dados):
                 pass
     return resultado
 
-def persistir(resultado, caminho="resultado.txt"):
+resultado = processar_dados(dados)
+persistir(resultado)
     with open(caminho, "w") as arquivo:
         for item in resultado:
             arquivo.write(str(item) + "\n")
