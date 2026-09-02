@@ -47,7 +47,19 @@ def processar_dados(dados):
     for dado in dados:
         if dado is not None:
             try:
-                resultado.append(avaliar(dado))
+import operator
+
+OPS = {ast.Add: operator.add, ast.Sub: operator.sub,
+       ast.Mult: operator.mul, ast.Div: operator.floordiv}
+
+def avaliar(expr):
+    def _eval(node):
+        if isinstance(node, ast.Constant) and isinstance(node.value, (int, float)):
+            return node.value
+        if isinstance(node, ast.BinOp) and type(node.op) in OPS:
+            return OPS[type(node.op)](_eval(node.left), _eval(node.right))
+        raise ValueError(f"expressão não permitida: {expr}")
+    return _eval(ast.parse(expr, mode="eval").body)
             except (ValueError, SyntaxError) as exc:
                 print(f"falha ao avaliar: {exc}")
     return resultado
