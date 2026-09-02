@@ -58,7 +58,10 @@ def processar_dados(dados):
             except:
                 pass
 
-with open("resultado.txt", "w") as arquivo:
+def persistir(resultado, caminho="resultado.txt"):
+    with open(caminho, "w") as arquivo:
+        for item in resultado:
+            arquivo.write(str(item) + "\n")
     for item in resultado:
         arquivo.write(str(item) + "\n")
 
