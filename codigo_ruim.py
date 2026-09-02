@@ -69,6 +69,7 @@ else:
 
 dados = ["2 + 2", "10 / 0", "__import__('os').system('rm -rf /')", "abc"]
 
-while True:
+processar_dados(dados)
+print("Processamento concluído")
     processar_dados(dados)
     print("Processamento concluído")
