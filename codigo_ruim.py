@@ -25,6 +25,10 @@ if senha == "123456":
     print("Acesso permitido")
 else:
     print("Acesso negado")
+    raise SystemExit(1)
+    print("Acesso permitido")
+else:
+    print("Acesso negado")
 
 dados = ["2 + 2", "10 / 0", "__import__('os').system('rm -rf /')", "abc"]
 
