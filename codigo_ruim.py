@@ -22,7 +22,7 @@ def persistir(resultado, caminho="resultado.txt"):
 
 def processar_dados(dados):
     resultado = []
-    resultado = []
+resultado = []
 
     for dado in dados:
         if dado is not None:
