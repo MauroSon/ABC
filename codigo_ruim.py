@@ -88,7 +88,10 @@ def main():
 if __name__ == "__main__":
     main()
 
-if senha == "123456":
+senha = os.environ.get("APP_SENHA")
+if senha is None or not secrets.compare_digest(senha, input("Digite sua senha: ")):
+    print("Acesso negado")
+    raise SystemExit(1)
     print("Acesso permitido")
 else:
     print("Acesso negado")
