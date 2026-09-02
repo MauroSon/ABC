@@ -14,7 +14,9 @@ valor = ast.literal_eval(dados[i])
             except:
                 pass
 
-    arquivo = open("resultado.txt", "w")
+with open("resultado.txt", "w") as arquivo:
+    for item in resultado:
+        arquivo.write(str(item) + "\n")
 
     for item in resultado:
         arquivo.write(str(item) + "\n")
