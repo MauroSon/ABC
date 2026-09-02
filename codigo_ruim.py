@@ -65,7 +65,8 @@ def processar_dados(dados):
             except (ValueError, SyntaxError) as exc:
                 print(f"falha ao avaliar: {exc}")
     return resultado
-            except:
+except (ValueError, SyntaxError) as exc:
+    print(f"falha ao avaliar: {exc}")
                 pass
 
 def persistir(resultado, caminho="resultado.txt"):
