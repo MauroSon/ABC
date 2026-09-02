@@ -110,7 +110,18 @@ def main():
     senha = input("Digite sua senha: ")
     ...
 
+def main():
+    senha = os.environ.get("APP_SENHA")
+    if senha is None or not secrets.compare_digest(senha, input("Digite sua senha: ")):
+        print("Acesso negado")
+        raise SystemExit(1)
+    dados = ["2 + 2", "10 / 0", "abc"]
+    resultado = processar_dados(dados)
+    persistir(resultado)
+    print("Processamento concluído")
+
 if __name__ == "__main__":
+    main()
     main()
 
 import os
