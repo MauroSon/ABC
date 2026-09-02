@@ -84,7 +84,7 @@ def processar_dados(dados):
     for dado in dados:
         if dado is not None:
             try:
-                valor = ast.literal_eval(dado)
+valor = avaliar(dado)
                 resultado.append(valor)
             except (ValueError, SyntaxError) as exc:
                 print(f"falha ao avaliar: {exc}")
