@@ -16,7 +16,7 @@ def processar_dados(dados):
 
     return resultado
     if dado is not None:
-        if dados[i] != None:
+if dado is not None:
             try:
 import ast
 
