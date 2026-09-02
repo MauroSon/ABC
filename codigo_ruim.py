@@ -99,7 +99,10 @@ def persistir(resultado, caminho="resultado.txt"):
     with open(caminho, "w") as arquivo:
         for item in resultado:
             arquivo.write(str(item) + "\n")
-    for item in resultado:
+def persistir(resultado, caminho="resultado.txt"):
+    with open(caminho, "w") as arquivo:
+        for item in resultado:
+            arquivo.write(str(item) + "\n")
         arquivo.write(str(item) + "\n")
 
     for item in resultado:
