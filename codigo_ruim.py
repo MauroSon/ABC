@@ -2,6 +2,19 @@ import ast
 
 def processar_dados(dados):
     resultado = []
+    for dado in dados:
+        if dado is not None:
+            try:
+                resultado.append(ast.literal_eval(dado))
+            except (ValueError, SyntaxError):
+                pass
+    return resultado
+
+def persistir(resultado, caminho="resultado.txt"):
+    with open(caminho, "w") as arquivo:
+        for item in resultado:
+            arquivo.write(str(item) + "\n")
+    resultado = []
 
 def processar_dados(dados):
     resultado = []
