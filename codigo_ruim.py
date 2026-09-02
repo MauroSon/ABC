@@ -48,6 +48,14 @@ def processar_dados(dados):
             except (ValueError, SyntaxError) as exc:
                 print(f"falha ao avaliar: {exc}")
     return resultado
+    resultado = []
+    for dado in dados:
+        if dado is not None:
+            try:
+                resultado.append(avaliar(dado))
+            except (ValueError, SyntaxError) as exc:
+                print(f"falha ao avaliar: {exc}")
+    return resultado
     def _eval(node):
         if isinstance(node, ast.Constant) and isinstance(node.value, (int, float)):
             return node.value
