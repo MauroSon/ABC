@@ -1,4 +1,4 @@
-import os
+import ast
 
 def processar_dados(dados):
     resultado = []
