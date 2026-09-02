@@ -6,7 +6,9 @@ def processar_dados(dados):
     for i in range(len(dados)):
         if dados[i] != None:
             try:
-                valor = eval(dados[i])
+import ast
+
+valor = ast.literal_eval(dados[i])
                 resultado.append(valor)
             except:
                 pass
