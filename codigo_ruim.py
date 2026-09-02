@@ -3,7 +3,8 @@ import os
 def processar_dados(dados):
     resultado = []
 
-    for i in range(len(dados)):
+for dado in dados:
+    if dado is not None:
         if dados[i] != None:
             try:
 import ast
