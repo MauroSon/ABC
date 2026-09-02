@@ -102,7 +102,9 @@ import secrets
 if senha is None or not secrets.compare_digest(senha, input("Digite sua senha: ")):
     print("Acesso negado")
     raise SystemExit(1)
-    print("Acesso permitido")
+if senha is None or not secrets.compare_digest(senha, input("Digite sua senha: ")):
+    print("Acesso negado")
+    raise SystemExit(1)
 else:
     print("Acesso negado")
     raise SystemExit(1)
