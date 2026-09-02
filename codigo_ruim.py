@@ -47,7 +47,12 @@ with open("resultado.txt", "w") as arquivo:
     return resultado
 
 
-senha = input("Digite sua senha: ")
+def main():
+    senha = input("Digite sua senha: ")
+    ...
+
+if __name__ == "__main__":
+    main()
 
 if senha == "123456":
     print("Acesso permitido")
