@@ -124,7 +124,10 @@ if __name__ == "__main__":
     main()
     main()
 
+import ast
+import operator
 import os
+import secrets
 import secrets
 if senha is None or not secrets.compare_digest(senha, input("Digite sua senha: ")):
     print("Acesso negado")
