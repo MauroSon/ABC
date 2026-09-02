@@ -3,7 +3,18 @@ import os
 def processar_dados(dados):
     resultado = []
 
-for dado in dados:
+def processar_dados(dados):
+    resultado = []
+
+    for dado in dados:
+        if dado is not None:
+            try:
+                valor = ast.literal_eval(dado)
+                resultado.append(valor)
+            except (ValueError, SyntaxError) as exc:
+                print(f"falha ao avaliar: {exc}")
+
+    return resultado
     if dado is not None:
         if dados[i] != None:
             try:
