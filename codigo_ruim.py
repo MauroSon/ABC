@@ -14,7 +14,10 @@ def persistir(resultado, caminho="resultado.txt"):
     with open(caminho, "w") as arquivo:
         for item in resultado:
             arquivo.write(str(item) + "\n")
-    resultado = []
+def persistir(resultado, caminho="resultado.txt"):
+    with open(caminho, "w") as arquivo:
+        for item in resultado:
+            arquivo.write(str(item) + "\n")
 
 def processar_dados(dados):
     resultado = []
