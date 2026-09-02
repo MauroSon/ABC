@@ -44,6 +44,8 @@ OPS = {ast.Add: operator.add, ast.Sub: operator.sub,
        ast.Mult: operator.mul, ast.Div: operator.floordiv}
 
 def processar_dados(dados):
+    return [valor for dado in dados if dado is not None
+            for valor in [avaliar(dado)] if valor is not None]
     resultado = []
     for dado in dados:
         if dado is not None:
