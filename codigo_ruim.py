@@ -54,7 +54,16 @@ def processar_dados(dados):
             return OPS[type(node.op)](_eval(node.left), _eval(node.right))
         raise ValueError(f"expressão não permitida: {expr}")
     return _eval(ast.parse(expr, mode="eval").body)
+def processar_dados(dados):
+    resultado = []
+    for dado in dados:
+        if dado is not None:
+            try:
+                valor = ast.literal_eval(dado)
                 resultado.append(valor)
+            except (ValueError, SyntaxError) as exc:
+                print(f"falha ao avaliar: {exc}")
+    return resultado
             except:
                 pass
 
